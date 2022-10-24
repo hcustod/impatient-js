@@ -1,7 +1,7 @@
 // from fcc lesson 
 
 function frankenSplice(arr1, arr2, n) {
-    new_arr = [...arr2];
+    let new_arr = [...arr2];
     new_arr.splice(n, 0, ...arr1);
     return new_arr;
   }
