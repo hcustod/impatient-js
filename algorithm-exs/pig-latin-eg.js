@@ -1,0 +1,15 @@
+
+// good use of ternary ? operator to provide two options for string endings
+
+function translatePigLatin(str) {
+    let consonantRegex = /^[^aeiou]+/;
+    let myConsonants = str.match(consonantRegex);
+    return myConsonants !== null
+      ? str
+          .replace(consonantRegex, "")
+          .concat(myConsonants)
+          .concat("ay")
+      : str.concat("way");
+  }
+  
+  translatePigLatin("consonant");
